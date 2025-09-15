@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Designer/Developer portfolio of Your Name: selected work, resume, contact." />
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Your Name — Portfolio">
+  <meta property="og:description" content="Selected work, about, and contact.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="assets/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Your Name",
+    "url": "https://yourdomain.com",
+    "image": "assets/portrait.jpg",
+    "jobTitle": "Your Role",
+    "sameAs": [
+      "https://github.com/yourhandle",
+      "https://www.linkedin.com/in/yourhandle/",
+      "https://twitter.com/yourhandle"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">Yevhen Bredis</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header> -->
+
+  <main id="main">
+    <section id="hero" class="hero">
+      <div class="wrap">
+        <div class="intro">
+          <h1>Hi, I’m <span class="accent">Yevhen Bredis</span>.</h1>
+          <p>I build <strong>fast, beautiful</strong> mobile apps using React Native, focused on smooth performance and delightful user experiences.</p>
+          <div class="cta">
+            <!-- <a class="btn" href="#work">View projects</a> -->
+            <a class="btn" href="assets/Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+          </div>
+        </div>
+        <picture>
+          <img src="./picture.jpg" alt="Portrait of Your Name" loading="lazy">
+        </picture>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <div id="projectsGrid" class="grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- <section id="about" class="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <p>Write a crisp bio here: what you do, industries you love, and what sets you apart. Mention tools/tech (e.g., React, Node, Figma) and your approach.</p>
+        <ul class="facts">
+          <li>📍 City, Country</li>
+          <li>🎓 Your degree or certification</li>
+          <li>🛠 Favorite stack: HTML, CSS, JS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Interested in working together? Drop a note:</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+        </form>
+        <div class="social">
+          <a href="https://github.com/yourhandle" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/yourhandle/" aria-label="LinkedIn">LinkedIn</a>
+          <a href="mailto:you@domain.com" aria-label="Email">Email</a>
+        </div>
+      </div>
+    </section> -->
+  </main>
+
+  <!-- <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="year"></span> Your Name. All rights reserved.</small>
+    </div>
+  </footer> -->
+</body>
+</html>
