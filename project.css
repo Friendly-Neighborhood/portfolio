@@ -81,3 +81,89 @@
 @media (max-width: 640px) {
   .masonry { column-count: 1; }
 }
+
+/* === Store screenshots === */
+.store-shots { padding: 1rem 0 2.5rem; }
+
+.stores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.store-block { background: transparent; }
+
+.store-head {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .8rem;
+}
+
+.store-badge {
+  width: 28px;
+  height: 28px;
+  display: block;
+  opacity: .85;
+}
+
+.shot-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+}
+
+/* карточка скрина */
+.store-shot {
+  width: clamp(160px, 28vw, 220px);
+  margin: 0;
+}
+
+.store-shot .device-frame {
+  background: color-mix(in oklab, var(--card), black 6%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 8px; /* «рамка» устройства */
+  box-shadow: 0 8px 24px color-mix(in oklab, black, transparent 82%);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.store-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  cursor: zoom-in;
+  background: color-mix(in oklab, var(--card), black 4%); /* на случай, если картинка грузится */
+}
+
+.store-shot:hover .device-frame {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px color-mix(in oklab, black, transparent 78%);
+}
+
+.store-caption {
+  color: var(--muted);
+  font-size: .9rem;
+  margin-top: .45rem;
+  text-align: center;
+}
+
+/* === Доработка лайтбокса для удобства клика === */
+.lb-nav,
+.lb-close {
+  z-index: 101; /* поверх картинки */
+}
+
+/* === Адаптив === */
+@media (max-width: 980px) {
+  .stores { grid-template-columns: 1fr; }
+  .shot-row { justify-content: center; }
+  .store-shot { width: clamp(160px, 42vw, 240px); }
+}
+
+@media (max-width: 640px) {
+  .store-shot { width: 100%; }
+  .shot-row { gap: .8rem; }
+}

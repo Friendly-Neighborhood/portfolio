@@ -61,6 +61,23 @@ Built-in tools for trainers make it easy to support clients with confidence and 
     process: [
 
     ],
+    storeScreens: {
+  android: [
+    { src: './android-01.png', alt: 'Onboarding — Goals' },
+    { src: './android-02.png', alt: 'Daily summary' },
+    { src: './android-03.png', alt: 'Macros per meal' },
+    { src: './android-04.png', alt: 'Templates list' },
+    { src: './android-05.png', alt: 'Chat assistant' },
+  ],
+  ios: [
+    { src: './ios-01.png', alt: 'Onboarding — Goals' },
+    { src: './ios-02.png', alt: 'Daily summary' },
+    { src: './ios-03.png', alt: 'Macros per meal' },
+    { src: './ios-04.png', alt: 'Templates list' },
+    { src: './ios-05.png', alt: 'Chat assistant' },
+  ]
+},
+
     images: [
       { src: './IMG_20250907_111327_702.png', alt: 'Nutrition screen' },
       { src: './IMG_20250907_111333_266.png', alt: 'Templates Screen' },
@@ -129,9 +146,51 @@ function renderProject(slug) {
     </figure>
   `).join('');
 
-  // Lightbox wiring
-  setupLightbox(data.images);
+
+  // Store-style screenshots
+// В renderProject:
+renderStoreScreens(data.storeScreens, data.images.length);
+
+
+  // Лайтбокс: объединим все картинки (галерея + сторы)
+  const allImages = [
+    ...data.images,
+    ...(data.storeScreens?.android || []),
+    ...(data.storeScreens?.ios || []),
+  ];
+  setupLightbox(allImages);
+
 }
+
+// Обнови сигнатуру и логику renderStoreScreens:
+function renderStoreScreens(storeScreens, baseGalleryCount = 0) {
+  const a = document.getElementById('shotsAndroid');
+  const i = document.getElementById('shotsIOS');
+  if (!a || !i || !storeScreens) return;
+
+  const mapShots = (arr, offset) => (arr || []).map((img, idx) => `
+    <figure class="store-shot">
+      <div class="device-frame">
+        <img src="${img.src}" alt="${img.alt}" loading="lazy" data-index="${offset + idx}">
+      </div>
+      <figcaption class="store-caption">${img.alt}</figcaption>
+    </figure>
+  `).join('');
+
+  a.innerHTML = mapShots(storeScreens.android, baseGalleryCount);
+  i.innerHTML = mapShots(
+    storeScreens.ios,
+    baseGalleryCount + (storeScreens.android?.length || 0)
+  );
+
+  document.querySelectorAll('.store-shot img[data-index]').forEach(img => {
+    img.addEventListener('click', () => {
+      const idx = parseInt(img.dataset.index, 10);
+      window.dispatchEvent(new CustomEvent('open-lightbox', { detail: { index: idx } }));
+    });
+  });
+}
+
 
 function setupLightbox(images) {
   const lb = document.getElementById('lightbox');
@@ -156,10 +215,17 @@ function setupLightbox(images) {
   const prev = () => open((index - 1 + images.length) % images.length);
   const next = () => open((index + 1) % images.length);
 
-  document.getElementById('gallery').addEventListener('click', (e) => {
-    const img = e.target.closest('img[data-index]');
-    if (!img) return;
-    open(parseInt(img.dataset.index, 10));
+  // — клики по старой галерее
+document.getElementById('gallery').addEventListener('click', (e) => {
+  const img = e.target.closest('img[data-index]');
+  if (!img) return;
+  open(parseInt(img.dataset.index, 10));
+});
+
+
+  // — внешние открытия (скрины стора)
+  window.addEventListener('open-lightbox', (e) => {
+    if (typeof e.detail?.index === 'number') open(e.detail.index);
   });
 
   lbClose.addEventListener('click', close);
@@ -174,3 +240,4 @@ function setupLightbox(images) {
     if (e.key === 'ArrowRight') next();
   });
 }
+
