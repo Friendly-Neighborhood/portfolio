@@ -19,7 +19,7 @@ const PROJECTS = {
     links: [
       { label: 'App Store', href: 'https://apps.apple.com/ua/app/gymapp/id6744613127', external: true },
       { label: 'Play Store', href: 'https://play.google.com/store/apps/details?id=com.gym.myapplication', external: true },
-      { label: 'Site', href: 'https://gym-bot.site/', external: true }
+      // { label: 'Site', href: 'https://gym-bot.site/', external: true }
     ],
     features: [],
     heroImage: './cover.png',
