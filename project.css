@@ -167,3 +167,7 @@
   .store-shot { width: 100%; }
   .shot-row { gap: .8rem; }
 }
+
+#overview {
+  white-space: pre-line; /* Preserves \n as line breaks */
+}

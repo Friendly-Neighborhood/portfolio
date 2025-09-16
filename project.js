@@ -23,66 +23,47 @@ const PROJECTS = {
     ],
     features: [],
     heroImage: './cover.png',
-    overview: `Gym Assistant is your AI-powered fitness and nutrition companion, designed for both individuals and professional trainers.
-
-
+overview: `Gym Assistant is your AI-powered fitness and nutrition companion, designed for both individuals and professional trainers.
 
 With Gym Assistant, you can:
-
-
-Track your meals and calories with precision
-
-
-Analyze proteins, fats, and carbs (PFC) per product or per day
-
-
-Receive personalized nutrition recommendations based on your age, weight, height, and fitness goals
-
-
-View daily summaries with vitamin and mineral breakdowns
-
-
-Manage multiple clients and provide them with structured feedback
-
-
-Create and reuse custom meal templates
-
-
-Use the app in Russian or Ukrainian
-
-
-Interact through an intuitive chatbot interface
-
+- Track your meals and calories with precision
+- Analyze proteins, fats, and carbs per meal or per day
+- Receive personalized nutrition recommendations based on your age, weight, height, and fitness goals
+- View daily summaries with vitamin and mineral breakdowns
+- Manage multiple clients and provide them with structured feedback
+- Create and reuse custom meal templates
+- Use the app in multiple languages
+- Interact through an intuitive chatbot interface
 
 Whether your goal is weight loss, maintenance, or muscle gain — Gym Assistant helps you stay on track and understand your nutrition better.
 
+Built-in tools for trainers make it easy to support clients with confidence and clarity.`,
 
-Built-in tools for trainers make it easy to support clients with confidence and clarity`,
     process: [
 
     ],
     storeScreens: {
   android: [
-    { src: './android-01.png', alt: 'Onboarding — Goals' },
-    { src: './android-02.png', alt: 'Daily summary' },
-    { src: './android-03.png', alt: 'Macros per meal' },
-    { src: './android-04.png', alt: 'Templates list' },
-    { src: './android-05.png', alt: 'Chat assistant' },
+    { src: './android-01.png', alt: 'Chat with AI assistant' },
+    { src: './android-02.png', alt: 'Chat with personal trainer' },
+    { src: './android-03.png', alt: 'Nutrients per day' },
+    { src: './android-04.png', alt: 'Vitamins per day' },
+    { src: './android-05.png', alt: 'Templates' },
   ],
   ios: [
-    { src: './ios-01.png', alt: 'Onboarding — Goals' },
-    { src: './ios-02.png', alt: 'Daily summary' },
-    { src: './ios-03.png', alt: 'Macros per meal' },
-    { src: './ios-04.png', alt: 'Templates list' },
-    { src: './ios-05.png', alt: 'Chat assistant' },
+    { src: './ios-01.png', alt: 'Chat with AI assistant' },
+    { src: './ios-02.png', alt: 'Chat with personal trainer' },
+    { src: './ios-03.png', alt: 'Nutrients per day' },
+    { src: './ios-04.png', alt: 'Vitamins per day' },
+    { src: './ios-05.png', alt: 'Templates' },
   ]
 },
 
     images: [
-      { src: './IMG_20250907_111327_702.png', alt: 'Nutrition screen' },
-      { src: './IMG_20250907_111333_266.png', alt: 'Templates Screen' },
-      { src: './IMG_20250907_111335_331.png', alt: 'Nutrition screen' },
-      { src: './IMG_20250907_111350_829.png', alt: 'Chat screen' },
+      { src: './IMG_20250907_111327_702.png', alt: 'Nutrients and vitamins' },
+      { src: './IMG_20250907_111333_266.png', alt: 'Templates' },
+      { src: './IMG_20250907_111335_331.png', alt: 'Nutrients per meal' },
+      { src: './IMG_20250907_111350_829.png', alt: 'Chat' },
     ],
     seoImage: '/cover.jpg'
   }
