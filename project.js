@@ -14,7 +14,7 @@ const PROJECTS = {
     title: 'Gym Assistant',
     subtitle: 'React Native Developer • iOS + Android',
     role: 'React Native Developer',
-    year: '2025',
+    year: 'March 2023 - Present',
     stack: 'React Native, JavaScript, TypeScript, Redux, REST API, Git',
     links: [
       { label: 'App Store', href: 'https://apps.apple.com/ua/app/gymapp/id6744613127', external: true },
