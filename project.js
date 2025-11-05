@@ -12,14 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
 const PROJECTS = {
   'mobile-app': {
     title: 'Gym Assistant',
-    subtitle: 'React Native Developer • iOS + Android',
-    role: 'React Native Developer',
-    year: 'March 2023 - Present',
+    subtitle: 'UI/UX Designer + React Native Developer • iOS + Android',
+    role: 'UI/UX Designer + React Native Developer',
+    year: '2025',
     stack: 'React Native, JavaScript, TypeScript, Redux, REST API, Git',
     links: [
+      { label: 'Website', href: 'https://gym-bot.site/test', external: true },
       { label: 'App Store', href: 'https://apps.apple.com/ua/app/gymapp/id6744613127', external: true },
       { label: 'Play Store', href: 'https://play.google.com/store/apps/details?id=com.gym.myapplication', external: true },
-      // { label: 'Site', href: 'https://gym-bot.site/', external: true }
+      
     ],
     features: [],
     heroImage: './cover.png',
