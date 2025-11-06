@@ -92,7 +92,7 @@ function renderProject(slug) {
     "name": data.title,
     "operatingSystem": "iOS, Android",
     "applicationCategory": "LifestyleApplication",
-    "creator": { "@type": "Person", "name": "Your Name" },
+    "creator": { "@type": "Person", "name": "Yevhen Bredis" },
     "description": data.overview,
     "image": [data.seoImage],
     "url": location.href
