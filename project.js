@@ -17,7 +17,7 @@ const PROJECTS = {
     year: '2025',
     stack: 'React Native, JavaScript, TypeScript, Redux, REST API, Git',
     links: [
-      { label: 'Website', href: 'https://gym-bot.site/test', external: true },
+      { label: 'Website', href: 'https://gym-bot.site', external: true },
       { label: 'App Store', href: 'https://apps.apple.com/ua/app/gymapp/id6744613127', external: true },
       { label: 'Play Store', href: 'https://play.google.com/store/apps/details?id=com.gym.myapplication', external: true },
       

@@ -1,12 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yevhen Bredis — Portfolio</title>
-  <meta name="description" content="Designer/Developer portfolio of Yevhen Bredis: selected work, resume, contact." />
+  <title>Yevhen Bredis — React Native Developer</title>
+  <meta name="description" content="Selected work, resume, and contact of Yevhen Bredis — digital products across mobile, web, and desktop." />
   <meta name="color-scheme" content="light dark">
-  <link rel="icon" href="./favicon.ico" type="image/svg+xml">
+
+  <link rel="icon" href="./favicon.ico" />
   <meta property="og:title" content="Yevhen Bredis — Portfolio">
   <meta property="og:description" content="Selected work, about, and contact.">
   <meta property="og:type" content="website">
@@ -24,99 +25,194 @@
     "name": "Yevhen Bredis",
     "url": "https://yourdomain.com",
     "image": "assets/portrait.jpg",
-    "jobTitle": "Your Role",
+    "jobTitle": "Product Designer / Developer",
     "sameAs": [
       "https://github.com/yourhandle",
-      "https://www.linkedin.com/in/yourhandle/",
-      "https://twitter.com/yourhandle"
+      "https://www.linkedin.com/in/yourhandle/"
     ]
   }
   </script>
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="#top">Yevhen Bredis</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <span class="brand-text">Yevhen Bredis</span>
+      </a>
+
       <nav class="nav" aria-label="Primary">
-        <a href="#work">Work</a>
+        <a href="#work">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+
+        <!-- <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span aria-hidden="true">🌓</span>
+        </button> -->
       </nav>
     </div>
-  </header> -->
+  </header>
 
   <main id="main">
     <section id="hero" class="hero">
-      <div class="wrap">
+      <div class="wrap hero-grid">
         <div class="intro">
-          <h1>Hi, I’m <span class="accent">Yevhen Bredis</span>.</h1>
-          <!-- <p>I build <strong>fast, beautiful</strong> mobile apps using React Native, focused on smooth performance and delightful user experiences.</p> -->
-           <p>I design and build <strong>outstanding</strong> digital products across all platforms — mobile, web and desktop — driving seamless performance, intuitive UX, and clean, maintainable architecture.</p>
+          <p class="eyebrow">React Native Developer</p>
+
+          <h1>
+            Hi, I’m <span class="accent">Yevhen Bredis</span>.
+          </h1>
+
+          <p class="lead">
+            I design and build <strong>high-performing</strong> mobile apps —
+            with intuitive UX, clean architecture, and measurable impact.
+          </p>
+
+          <ul class="highlights" aria-label="Highlights">
+            <li><span class="pill">UX / UI</span></li>
+            <li><span class="pill">React Native</span></li>
+            <!-- <li><span class="pill">Design Systems</span></li>
+            <li><span class="pill">Performance</span></li> -->
+            <li><span class="pill">Android</span></li>
+            <li><span class="pill">iOS</span></li>
+          </ul>
+
           <div class="cta">
-            <!-- <a class="btn" href="#work">View projects</a> -->
-            <a class="btn" href="./CV_Yevhen_Bredis.pdf" target="_blank" rel="noopener">Download résumé</a>
+            <a class="btn" href="#work">View projects</a>
+            <a class="btn ghost" href="./CV_Yevhen_Bredis.pdf" target="_blank" rel="noopener">
+              Download résumé
+            </a>
           </div>
+
+          <p class="meta">
+            Open to work ·
+            <a class="inline-link" href="#contact">Let’s talk</a>
+          </p>
         </div>
-        <!-- <picture>
+        <picture>
           <img src="./picture.jpg" alt="Portrait of Your Name" loading="lazy">
-        </picture> -->
+        </picture>
+
+
+        <!-- <aside class="hero-card" aria-label="Profile card">
+          <div class="hero-card__top">
+             <div>
+              <div class="hero-name">Yevhen Bredis</div>
+              <div class="hero-role">Designer / Developer</div>
+            </div>
+          </div>
+
+          <div class="hero-card__stats" role="list" aria-label="Key stats">
+            <div class="stat" role="listitem">
+              <div class="stat-k">Focus</div>
+              <div class="stat-v">Product UX + Delivery</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat-k">Strength</div>
+              <div class="stat-v">Speed + Quality</div>
+            </div>
+          </div>
+
+          <div class="hero-card__links" aria-label="Social links">
+            <a class="chip" href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub</a>
+            <a class="chip" href="https://www.linkedin.com/in/yevhen-bredis/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="chip" href="mailto:yevhen.bredis@gmail.com">Email</a>
+          </div>
+        </aside> -->
       </div>
     </section>
 
     <section id="work" class="work">
       <div class="wrap">
-        <h2>Projects</h2>
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="section-sub">
+            A curated set of shipped work. More signal, less noise (your recruiter’s attention span says thanks).
+          </p>
+        </div>
+
         <div id="projectsGrid" class="grid" aria-live="polite"></div>
       </div>
     </section>
 
-    <!-- <section id="about" class="about">
+    <section id="about" class="about">
       <div class="wrap">
-        <h2>About</h2>
-        <p>Write a crisp bio here: what you do, industries you love, and what sets you apart. Mention tools/tech (e.g., React, Node, Figma) and your approach.</p>
-        <ul class="facts">
-          <li>📍 City, Country</li>
-          <li>🎓 Your degree or certification</li>
-          <li>🛠 Favorite stack: HTML, CSS, JS</li>
-        </ul>
+        <div class="section-head">
+          <h2>About</h2>
+          <p class="section-sub">What I do and how I work.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I combine product design thinking with hands-on engineering to ship experiences that are fast,
+              consistent, and scalable. I care about system-level UX, accessibility, and maintainable code.
+            </p>
+            <p>
+              I’m happiest where design meets constraints: performance budgets, edge cases, and real users.
+            </p>
+          </div>
+
+          <ul class="facts" aria-label="Quick facts">
+            <li>📍 Worldwide</li>
+            <li>🧩 Design systems & UI kits</li>
+            <li>⚙️ React Native (Android, iOS)</li>
+            <li>🚀 Performance & UX polish</li>
+            <li>🧪 Prototyping + iteration</li>
+            <li>🤝 Clear collaboration</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <div class="wrap">
-        <h2>Contact</h2>
-        <p>Interested in working together? Drop a note:</p>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-          <label>
-            <span>Name</span>
-            <input name="name" type="text" required>
-          </label>
-          <label>
-            <span>Email</span>
-            <input name="email" type="email" required>
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button class="btn" type="submit">Send</button>
-        </form>
-        <div class="social">
-          <a href="https://github.com/yourhandle" aria-label="GitHub">GitHub</a>
-          <a href="https://www.linkedin.com/in/yourhandle/" aria-label="LinkedIn">LinkedIn</a>
-          <a href="mailto:you@domain.com" aria-label="Email">Email</a>
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="section-sub">Let’s build something users love (and metrics approve).</p>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-card">
+            <p class="contact-lead">Best way to reach me:</p>
+            <div class="contact-links">
+              <a class="btn" href="mailto:yevhen.bredis@gmail.com">Email me</a>
+              <!-- <a class="btn ghost" href="https://www.linkedin.com/in/yevhen-bredis/" target="_blank" rel="noopener">LinkedIn</a> -->
+            </div>
+            <p class="meta">Or grab the résumé above — it’s the “TL;DR” for busy calendars.</p>
+          </div>
+
+          <!-- Optional: keep your Formspree form if you want -->
+          <!--
+          <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn" type="submit">Send</button>
+          </form>
+          -->
         </div>
       </div>
-    </section> -->
+    </section>
   </main>
 
-  <!-- <footer class="site-footer">
-    <div class="wrap">
-      <small>© <span id="year"></span> Your Name. All rights reserved.</small>
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <small>© <span id="year"></span> Yevhen Bredis</small>
+      <!-- <a class="inline-link" href="#top">Back to top</a> -->
     </div>
-  </footer> -->
+  </footer>
 </body>
 </html>
