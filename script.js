@@ -7,7 +7,7 @@ const projects = [
     desc: "AI-powered fitness and nutrition companion for individuals and professional trainers.",
     tags: ["Mobile", "iOS", "Android", "React Native"],
     thumb: "./cover.png",
-    year: "2025",            // optional
+    //year: "2025",            // optional
     role: "Design + Dev",    // optional
     impact: "Fast MVP" // optional
   }

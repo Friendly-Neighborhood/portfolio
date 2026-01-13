@@ -14,7 +14,7 @@ const PROJECTS = {
     title: 'Gym Assistant',
     subtitle: 'UI/UX Designer + React Native Developer • iOS + Android',
     role: 'UI/UX Designer + React Native Developer',
-    year: '2025',
+    year: '2024 - Present',
     stack: 'React Native, JavaScript, TypeScript, Redux, REST API, Git',
     links: [
       { label: 'Website', href: 'https://gym-bot.site', external: true },
